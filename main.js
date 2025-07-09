@@ -54,7 +54,11 @@
 
             async function getUniversities() {
                 try {
-                    let response = await fetch(`http://universities.hipolabs.com/search?name=${queryName}`)
+                    let response = await fetch(`http://universities.hipolabs.com/search?name=${queryName}`, {
+                        headers: {
+                            "Access-Control-Allow-Origin": "*"
+                        }
+                    })
                     let data = await response.json()
 
                     if (response.status === 200) {
