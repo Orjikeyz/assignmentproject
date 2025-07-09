@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="fixed-width">
+            <nav>
+                <ul>
+                    <li>
+                        <h2>USP</h2>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>Home</li>
+                            <li onclick="openLoginModal()">Login</li>
+                            <li onclick="openRegisterModal()">Register</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="modal-overlay"></div>
+        <div class="login-modal-container">
+            <span id="closeLogin">x</span>
+            <div class="login-form">
+                <div class="login-header" style="text-align: center;">
+                    <p>Login Panel</p><br>
+                </div>
+
+                <label for="">Username</label>
+                <input type="text" name="username" id="username">
+
+                <label for="">Password</label>
+                <input type="password" name="password" id="password">
+
+                <button>Login</button>
+            </div>
+        </div>
+
+        <div class="register-modal-container" >
+            <span id="closeRegister">x</span>
+            <div class="register-form">
+                <div class="register-header" style="text-align: center;">
+                    <p>Registration Panel</p><br>
+                </div>
+
+                <label for="">Username</label>
+                <input type="text" name="username" id="username">
+
+                <label for="">Password</label>
+                <input type="password" name="password" id="password">
+
+                <button>Register</button>
+            </div>
+        </div>
+
+        <div class="fixed-width">
+            <div class="search-section">
+                <h1 style="margin: 15px 0 5px 0; text-align: center;">Find Universites</h1>
+                <p style="font-size: 18px; margin: 15px 0 5px 0; text-align: center;">Search for universities and
+                    discover their official websites</p>
+                <br>
+
+                <div class="search-form">
+                    <form action="" method="post" onsubmit="return false;">
+                        <!-- <label for="">University Name</label> -->
+                        <input type="text" placeholder="Enter university name..." name="name" value="Middle"
+                            id="searchInput">
+                        <button id="searchBtn">Search Universites</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Show list of universities  -->
+            <div class="university-list">
+                <h1 style="margin: 15px 0 5px 0; text-align: center;">Explore Universities</h1>
+                <p style='text-align: center; margin: 20px 0; display: none;' id="data-info">No Data Available</p>
+                <br>
+                <img src="https://static.wixstatic.com/media/68315b_30dbad1140034a3da3c59278654e1655~mv2.gif"
+                    id="loader" width="20px" alt="loader">
+
+                <div class="university-list-content">
+                    <!-- University Content Grid  -->
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <br><br><br><br>
+    <footer>
+        <p>© 2025 University Search Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
